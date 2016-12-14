@@ -4,17 +4,14 @@
  */
 
 /**
- * JavaQuickStart module
+ * JavaGetStartedOverview module
  */
 define(['ojs/ojcore', 'knockout'
 ], function (oj, ko) {
-    /**
-     * The view model for the main content view template
-     */
-    function JavaQuickStartContentViewModel() {
-        var self = this;
 
+    function JavaGetStartedOverview() {
+        var self = this;
     }
-    
-    return JavaQuickStartContentViewModel;
+
+    return JavaGetStartedOverview;
 });

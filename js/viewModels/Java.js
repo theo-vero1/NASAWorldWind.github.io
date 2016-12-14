@@ -8,12 +8,11 @@
  */
 define(['ojs/ojcore', 'knockout','ojs/ojrouter','ojs/ojnavigationlist'
 ], function (oj, ko) {
-    // Create a child router named 'javaTopics' for the 'java' routerState
+    // Create a child router named 'javatopic' for the main router's 'java' routerState
     var childRouter = oj.Router.rootInstance.createChildRouter('javatopic', 'java');
-    
     childRouter.configure({
-        //'quickStart': {label: 'Quick Start', value: "JavaQuickStart", isDefault: true},
-        'guide': {label: 'Developers Guide', value: "JavaDevGuide", isDefault: true},
+        'getstarted': {label: 'Get Started', value: "JavaGetStarted", isDefault: true},
+        'guide': {label: 'Developers Guide', value: "JavaDevGuide"},
         'api': {label: 'API Documentation', value: 'JavaApi'}
         //'examples': {label: 'Examples', value: "JavaExamples"}
     });
