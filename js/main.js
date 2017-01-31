@@ -79,7 +79,7 @@ require([
         'android': {label: 'Android', value: 'Android'},
         'java': {label: 'Java', value: 'Java'},
         'web': {label: 'Web', value: 'Web'},
-        'issues': {label: 'Issues', values: 'Issues'}
+        'issues': {label: 'Issues', value: 'Issues'}
     });
     // Create a syncronized list of icons to accompany the 
     routerStateIcons = {
@@ -88,8 +88,7 @@ require([
         'android': {iconClass: 'fa fa-android fa-lg oj-navigationlist-item-icon'},
         'java': {iconClass: 'fa fa-coffee fa-lg oj-navigationlist-item-icon'},
         'web': {iconClass: 'fa fa-globe fa-lg oj-navigationlist-item-icon'},
-        'research': {iconClass: 'fa fa-rocket fa-lg oj-navigationlist-item-icon'},
-        'issues': {iconClass: 'fa fa-bug fa-lg oj-navigationlist-item-icon', hidden: true}};
+        'research': {iconClass: 'fa fa-rocket fa-lg oj-navigationlist-item-icon'}}
 
     /**
      * Constructs the root view model for the application.
@@ -118,10 +117,9 @@ require([
         for (i = 0; i < router.states.length; i++) {
             state = router.states[i];
             icon = routerStateIcons[state.id];
-            if (icon.hidden) {
-                continue;
+            if (icon) {
+                navData.push({name: state.label, id: state.id, iconClass: icon.iconClass});
             }
-            navData.push({name: state.label, id: state.id, iconClass: icon.iconClass});
         }
         self.navDataSource = new oj.ArrayTableDataSource(navData, {idAttribute: 'id'});
 
