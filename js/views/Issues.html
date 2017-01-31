@@ -1,62 +1,60 @@
 <section>
-        <div class="justifiedCol">
-            <div>
-                <h2 class="home-h2">Issues and Contribution</i></h2>
+    <div>
+        <h2 class="home-h2">Issues and Contribution</i></h2>
+        <p class="home-ptag">
+            NASA initiated the World Wind open source project in 2003. The objectives try to achieve balance between the 
+            needs of the stakeholders and the greater community. Ongoing development of the code is primarily by NASA 
+            software engineers. Code contribution and bug fixes are greatly appreciated but require careful analysis by 
+            the NASA engineers before being incorporated into the code base. 
+        </p>
+        <p class="home-ptag">
+            Guidelines for reporting issues and bugs, requesting new features, and pull requests are detailed below.
+            The World Wind team uses GitHub and TravisCI extensively for managing development of the Java, Android, and
+            Web SDKs.
+        </p>
+        <hr>
+        <div class="oj-flex oj-flex-items-pad">
+            <div class="oj-sm-12 oj-lg-4 oj-flex-item">
+                <h3 class="home-h3"><span class="fa fa-bug fa-lg"></span> Issues and Bugs</h3>
                 <p class="home-ptag">
-                    NASA initiated the World Wind open source project in 2003. The objectives try to achieve balance between the 
-                    needs of the stakeholders and the greater community. Ongoing development of the code is primarily by NASA 
-                    software engineers. Code contribution and bug fixes are greatly appreciated but require careful analysis by 
-                    the NASA engineers before being incorporated into the code base. 
+                    All issue and bug tracking is now provided by GitHub's Issue tracker. You will need a GitHub account
+                    to create an issue. Providing a short, self contained code example of how the issue manifests, an
+                    image, or stack trace, significantly facilitates investigation efforts. The World Wind team will attempt
+                    to add a label to your reported issue in a timely fashion. Resolution of the issue is dependent on the
+                    team's current priorities and work load.
+                    <ul data-bind="ojComponent: {component: 'ojListView'}">
+                        <li><a data-bind="attr: {href: 'https://github.com/NASAWorldWind/WorldWindAndroid/issues'}"><h3
+                                class="dash-h3">Issue Tracker for Android</h3></a></li>
+                        <li><a data-bind="attr: {href: 'https://github.com/NASAWorldWind/WorldWindJava/issues'}"><h3
+                                class="dash-h3">Issue Tracker for Java</h3></a></li>
+                        <li><a data-bind="attr: {href: 'https://github.com/NASAWorldWind/WebWorldWind/issues'}"><h3 class="dash-h3">
+                            Issue Tracker for Web</h3></a></li>
+                    </ul>
                 </p>
+            </div>
+            <div class="og-sm-12 oj-lg-4 oj-flex-item">
+                <h3 class="home-h3"><span class="fa fa-rocket fa-lg"></span> Feature Requests</h3>
                 <p class="home-ptag">
-                    Guidelines for reporting issues and bugs, requesting new features, and pull requests are detailed below.
-                    The World Wind team uses GitHub and TravisCI extensively for managing development of the Java, Android, and
-                    Web SDKs.
+                    New features should use the GitHub Issue functionality. The World Wind team will likely add a 'request' 
+                    label. The World Wind team uses the GitHub Issue tracker to outline development goals, including future
+                    features. Planned future features will be labeled 'enhancement' or 'new feature'.
                 </p>
-                <hr>
-                <div class="oj-flex oj-flex-items-pad">
-                    <div class="oj-sm-12 oj-lg-4 oj-flex-item">
-                        <h3 class="home-h3"><span class="fa fa-bug fa-lg"></span> Issues and Bugs</h3>
-                        <p class="home-ptag">
-                            All issue and bug tracking is now provided by GitHub's Issue tracker. You will need a GitHub account
-                            to create an issue. Providing a short, self contained code example of how the issue manifests, an
-                            image, or stack trace, significantly facilitates investigation efforts. The World Wind team will attempt
-                            to add a label to your reported issue in a timely fashion. Resolution of the issue is dependent on the
-                            team's current priorities and work load.
-                            <ul data-bind="ojComponent: {component: 'ojListView'}">
-                                <li><a data-bind="attr: {href: 'https://github.com/NASAWorldWind/WorldWindAndroid/issues'}"><h3
-                                        class="dash-h3">Issue Tracker for Android</h3></a></li>
-                                <li><a data-bind="attr: {href: 'https://github.com/NASAWorldWind/WorldWindJava/issues'}"><h3
-                                        class="dash-h3">Issue Tracker for Java</h3></a></li>
-                                <li><a data-bind="attr: {href: 'https://github.com/NASAWorldWind/WebWorldWind/issues'}"><h3 class="dash-h3">
-                                    Issue Tracker for Web</h3></a></li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="og-sm-12 oj-lg-4 oj-flex-item">
-                        <h3 class="home-h3"><span class="fa fa-rocket fa-lg"></span> Feature Requests</h3>
-                        <p class="home-ptag">
-                            New features should use the GitHub Issue functionality. The World Wind team will likely add a 'request' 
-                            label. The World Wind team uses the GitHub Issue tracker to outline development goals, including future
-                            features. Planned future features will be labeled 'enhancement' or 'new feature'.
-                        </p>
-                    </div>
-                    <div class="oj-sm-12 oj-lg-4 oj-flex-item">
-                        <h3 class="home-h3"><span class="fa fa-github-square fa-lg"></span> Pull Requests</h3>
-                        <p class="home-ptag">
-                            Community participation is encouraged through the use of the GitHub issue tracker and the World Wind community 
-                            forums. Pull requests are an acceptable way to propose features and fixes, and are reviewed by the NASA team 
-                            as appropriate, given their perceived critical nature and available resources.  Ideas and code culled from pull 
-                            requests will be attributed to their authors through mentions and links in subsequent commits.
-                            <ul data-bind="ojComponent: {component: 'ojListView'}">
-                                <li><a data-bind="attr: {href: 'https://forum.worldwindcentral.com/forum.php'}">
-                                    <h3 class="dash-h3">World Wind Community Forum</h3>
-                                    <p class="oj-text-sm">Support for all World Wind SDKs and topics</p>
-                                </a></li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
+            </div>
+            <div class="oj-sm-12 oj-lg-4 oj-flex-item">
+                <h3 class="home-h3"><span class="fa fa-github-square fa-lg"></span> Pull Requests</h3>
+                <p class="home-ptag">
+                    Community participation is encouraged through the use of the GitHub issue tracker and the World Wind community 
+                    forums. Pull requests are an acceptable way to propose features and fixes, and are reviewed by the NASA team 
+                    as appropriate, given their perceived critical nature and available resources.  Ideas and code culled from pull 
+                    requests will be attributed to their authors through mentions and links in subsequent commits.
+                    <ul data-bind="ojComponent: {component: 'ojListView'}">
+                        <li><a data-bind="attr: {href: 'https://forum.worldwindcentral.com/forum.php'}">
+                            <h3 class="dash-h3">World Wind Community Forum</h3>
+                            <p class="oj-text-sm">Support for all World Wind SDKs and topics</p>
+                        </a></li>
+                    </ul>
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
