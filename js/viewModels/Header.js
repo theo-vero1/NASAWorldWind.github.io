@@ -7,7 +7,7 @@
  * Header module
  */
 define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojdialog',
-    'ojs/ojtoolbar', 'ojs/ojbutton', 'ojs/ojmenu'],
+    'ojs/ojtoolbar', 'ojs/ojbutton', 'ojs/ojmenu', 'ojs/ojrouter'],
         function (oj, ko, $) {
 
             /**
@@ -36,7 +36,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojdialog',
                             window.open("https://forum.worldwindcentral.com", "_self");
                             break;
                         case "issues":
-                            window.open("?root=issues", "_self");
+                            oj.Router.rootInstance.go("issues");
                             break;
                         // Open the About Box
                         case "about":
