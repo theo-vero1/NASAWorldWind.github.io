@@ -11,10 +11,10 @@ define(['ojs/ojcore', 'knockout', 'jquery',
         var self = this;
 
         // Repositories
-        self.worldwindUrl = "https://github.com/NASAWorldWind";
-        self.androidSdkUrl = "https://github.com/NASAWorldWind/WorldWindAndroid";
-        self.javaSdkUrl = "https://github.com/NASAWorldWind/WorldWindJava";
-        self.webSdkUrl = "https://github.com/NASAWorldWind/WebWorldWind";
+        self.androidIssuesUrl = "https://github.com/NASAWorldWind/WorldWindAndroid/issues";
+        self.javaIssuesUrl = "https://github.com/NASAWorldWind/WorldWindJava/issues";
+        self.webIssuesUrl = "https://github.com/NASAWorldWind/WebWorldWind/issues";
+        self.worldwindForum = "https://forum.worldwindcentral.com/";
     }
 
     return Issues;

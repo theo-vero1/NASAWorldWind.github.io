@@ -23,12 +23,9 @@
                     to add a label to your reported issue in a timely fashion. Resolution of the issue is dependent on the
                     team's current priorities and work load.
                     <ul data-bind="ojComponent: {component: 'ojListView'}">
-                        <li><a data-bind="attr: {href: 'https://github.com/NASAWorldWind/WorldWindAndroid/issues'}"><h3
-                                class="dash-h3">Issue Tracker for Android</h3></a></li>
-                        <li><a data-bind="attr: {href: 'https://github.com/NASAWorldWind/WorldWindJava/issues'}"><h3
-                                class="dash-h3">Issue Tracker for Java</h3></a></li>
-                        <li><a data-bind="attr: {href: 'https://github.com/NASAWorldWind/WebWorldWind/issues'}"><h3 class="dash-h3">
-                            Issue Tracker for Web</h3></a></li>
+                        <li><a data-bind="attr: {href: androidIssuesUrl}"><h3 class="dash-h3">Issue Tracker for Android</h3></a></li>
+                        <li><a data-bind="attr: {href: javaIssuesUrl}"><h3 class="dash-h3">Issue Tracker for Java</h3></a></li>
+                        <li><a data-bind="attr: {href: webIssuesUrl}"><h3 class="dash-h3">Issue Tracker for Web</h3></a></li>
                     </ul>
                 </p>
             </div>
@@ -48,7 +45,7 @@
                     as appropriate, given their perceived critical nature and available resources.  Ideas and code culled from pull 
                     requests will be attributed to their authors through mentions and links in subsequent commits.
                     <ul data-bind="ojComponent: {component: 'ojListView'}">
-                        <li><a data-bind="attr: {href: 'https://forum.worldwindcentral.com/forum.php'}">
+                        <li><a data-bind="attr: {href: worldwindForum}">
                             <h3 class="dash-h3">World Wind Community Forum</h3>
                             <p class="oj-text-sm">Support for all World Wind SDKs and topics</p>
                         </a></li>
