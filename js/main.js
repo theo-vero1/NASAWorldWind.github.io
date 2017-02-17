@@ -88,7 +88,7 @@ require([
         {name: 'java', iconClass: 'fa fa-coffee fa-lg oj-navigationlist-item-icon'},
         {name: 'web', iconClass: 'fa fa-globe fa-lg oj-navigationlist-item-icon'},
         {name: 'support', iconClass: 'fa fa-life-ring fa-lg oj-navigationlist-item-icon'}
-    ]
+    ];
     
     /**
      * Constructs the root view model for the application.
@@ -153,7 +153,7 @@ require([
         self.mdScreen.subscribe(function () {
             oj.OffcanvasUtils.close(self.drawerParams);
         });
-    }
+    };
 
     oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();
     oj.Router.sync().then(
