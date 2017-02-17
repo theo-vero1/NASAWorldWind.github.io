@@ -70,7 +70,7 @@ require([
     // The mainContent section is using an ojModule.moduleConfig binding to load
     // the view/viewModels with the same names as the router state.
     var router = oj.Router.rootInstance,
-            routerStateIcons;
+            navbarRouterStates;
             
     // Configure the router states
     // e.g.,  routerstate: {label: menu text, value: view model name}
@@ -81,15 +81,14 @@ require([
         'web': {label: 'Web', value: 'Web'},
         'issues': {label: 'Issues', value: 'Issues'}
     });
-    // Create a syncronized list of icons to accompany the 
-    routerStateIcons = {
-        'home': {iconClass: 'fa fa-home fa-lg oj-navigationlist-item-icon'},
-        'dashboard': {iconClass: 'fa fa-dashboard fa-lg oj-navigationlist-item-icon'},
-        'android': {iconClass: 'fa fa-android fa-lg oj-navigationlist-item-icon'},
-        'java': {iconClass: 'fa fa-coffee fa-lg oj-navigationlist-item-icon'},
-        'web': {iconClass: 'fa fa-globe fa-lg oj-navigationlist-item-icon'},
-        'research': {iconClass: 'fa fa-rocket fa-lg oj-navigationlist-item-icon'}}
-
+    // Configure which states (and corresponding icons) will be displayed on the navigation bar
+    navbarRouterStates = [
+        {name: 'home', iconClass: 'fa fa-home fa-lg oj-navigationlist-item-icon'},
+        {name: 'android', iconClass: 'fa fa-android fa-lg oj-navigationlist-item-icon'},
+        {name: 'java', iconClass: 'fa fa-coffee fa-lg oj-navigationlist-item-icon'},
+        {name: 'web', iconClass: 'fa fa-globe fa-lg oj-navigationlist-item-icon'}
+    ]
+    
     /**
      * Constructs the root view model for the application.
      */
@@ -98,7 +97,7 @@ require([
                 smQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.SM_ONLY),
                 mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_ONLY),
                 lgQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.LG_UP),
-                navData = [], i, numStates, state, icon;
+                navData = [], i, numStates, navbarState, state, icon;
 
         // Create Knockout observable media queries to implement responsive behaviors
         self.smScreen = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(smQuery);
@@ -113,13 +112,11 @@ require([
 
         // Create the main navigation menu data-source (an ArrayTableDataSource)
         // from the router and corresponding router icon classes.
-        numStates = router.states.length;
-        for (i = 0; i < router.states.length; i++) {
-            state = router.states[i];
-            icon = routerStateIcons[state.id];
-            if (icon) {
-                navData.push({name: state.label, id: state.id, iconClass: icon.iconClass});
-            }
+        numStates = navbarRouterStates.length;
+        for (i = 0; i < numStates; i++) {
+            navbarState = navbarRouterStates[i];
+            state = router.getState(navbarState.name);
+            navData.push({name: state.label, id: state.id, iconClass: navbarState.iconClass});
         }
         self.navDataSource = new oj.ArrayTableDataSource(navData, {idAttribute: 'id'});
 
