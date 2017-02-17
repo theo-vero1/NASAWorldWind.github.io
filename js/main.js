@@ -79,14 +79,15 @@ require([
         'android': {label: 'Android', value: 'Android'},
         'java': {label: 'Java', value: 'Java'},
         'web': {label: 'Web', value: 'Web'},
-        'issues': {label: 'Issues', value: 'Issues'}
+        'support': {label: 'Support', value: 'Support'}
     });
     // Configure which states (and corresponding icons) will be displayed on the navigation bar
     navbarRouterStates = [
         {name: 'home', iconClass: 'fa fa-home fa-lg oj-navigationlist-item-icon'},
         {name: 'android', iconClass: 'fa fa-android fa-lg oj-navigationlist-item-icon'},
         {name: 'java', iconClass: 'fa fa-coffee fa-lg oj-navigationlist-item-icon'},
-        {name: 'web', iconClass: 'fa fa-globe fa-lg oj-navigationlist-item-icon'}
+        {name: 'web', iconClass: 'fa fa-globe fa-lg oj-navigationlist-item-icon'},
+        {name: 'support', iconClass: 'fa fa-life-ring fa-lg oj-navigationlist-item-icon'}
     ]
     
     /**

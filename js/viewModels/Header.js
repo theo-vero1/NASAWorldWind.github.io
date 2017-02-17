@@ -35,9 +35,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojknockout', 'ojs/ojdialog',
                         case "forum":
                             window.open("https://forum.worldwindcentral.com", "_self");
                             break;
-                        case "issues":
-                            oj.Router.rootInstance.go("issues");
-                            break;
                         // Open the About Box
                         case "about":
                             $("#aboutDialog").ojDialog("open");

@@ -1,13 +1,13 @@
 /**
- * Issues module
+ * Support module
  */
 define(['ojs/ojcore', 'knockout', 'jquery',
     'ojs/ojknockout', 'ojs/ojmasonrylayout'
 ], function (oj, ko, $) {
     /**
-     * The view model for the issues view template
+     * The view model for the support view template
      */
-    function Issues() {
+    function Support() {
         var self = this;
 
         // Repositories
@@ -17,5 +17,5 @@ define(['ojs/ojcore', 'knockout', 'jquery',
         self.worldwindForum = "https://forum.worldwindcentral.com/";
     }
 
-    return Issues;
+    return Support;
 });
